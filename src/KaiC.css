@@ -14,12 +14,12 @@ body {
 }
 @media only screen and (max-width:768px) {
     body {
-        background-size: contain;
+        background-size: cover;
     }
 }
 @media only screen and (max-width:480px) {
     body {
-        background-size: 100% auto;
+        background-size: cover;
     }
 }
 div#Enig1 {
@@ -73,7 +73,7 @@ div#DivRespostaEn1 {
 
 }
 div#Dakimakura {
-    background-image: url(../src/Dakimakura.jpg);
+    background-image: url(../src/Dakimakura.png);
     background-size: cover;
     border-radius: 10px;
     background-repeat: no-repeat;
