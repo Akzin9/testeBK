@@ -5,162 +5,148 @@ html, body {
     margin: 0;
     overflow: hidden;
 }
+
 body {
     background-image: url(../src/background1.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
 
-}
-@media  (max-width:1080px) {
-    body {
-        background-size: 1080px 2000px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-    div#Enig1 {
-        color: rgba(255, 255, 0, 0.897);
-        font: 25pt Arial normal;
-        margin-top: 10%;
-        margin-left: 200px;
-        width: 460px;
-        height: auto;
-        border-radius: 15px;
-        -webkit-text-stroke-width: 0.1px;
-        -webkit-text-stroke-color: black;
-    }
-    div#AnsEnig1 {
-        border-radius: 15px;
-        padding: 10px;
-        width: 440px;
-        height: auto;
-        margin-left: 200px;
-    }
-    input#AnsEnig1Inp {
-        border-radius: 7px;
-        padding: 10px;
-        width: 240px;
-        font: 15pt Arial normal;
-    }
-    input#AnsEnig1Button {
-        width: 80px;
-        height: auto;
-        border-radius: 7px;
-        padding: 9px;
-        font: 14pt Arial normal;
-        background-image: url(../src/Enig1RespButtonBackground.gif);
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: rgb(0, 0, 0);
-        -webkit-text-stroke-width: 0.1px;
-        -webkit-text-stroke-color: rgba(234, 0, 255, 0.6);
-    }
-    div#DivRespostaEn1 {
-        background-image: url(../src/backgroundFimEnig1.gif);
-        background-size: 600px 350px;
-        background-repeat: no-repeat;
-        border-radius: 10px;
-        width: 600px;
-        height: 350px;
-        position: absolute;
-        margin-left: 200;
-        margin-top: 5%;
-        display: none;
-    }
-    div#Dakimakura {
-        background-image: url(../src/Dakimakura.png);
-        background-size: cover;
-        border-radius: 10px;
-        background-repeat: no-repeat;
-        width: 120px;
-        height: 200px;
-        position: absolute;
-        margin-top: 3%;
-        margin-left: 2%;
-    }
-    div#DakiText {
-        width: 130px;
-        height: 160px;
-        position: absolute;
-        margin-left: 50%;
-        margin-top: 5%;
-        font: 25pt Arial normal;
-        color: yellow;
-    }
-    p#p1 {
-        font: 17pt Arial normal;
-    }
-}
+/* Estilo geral (desktop ou largura grande) */
 div#Enig1 {
     color: rgba(255, 255, 0, 0.897);
-    font: 50pt Arial normal;
+    font: 50pt Arial, sans-serif;
     margin-top: 10%;
-    margin-left: 38%;
-    width: 600px;
-    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
     border-radius: 15px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
+    text-align: center;
 }
+
 div#AnsEnig1 {
     border-radius: 15px;
     padding: 10px;
-    width: 585px;
-    height: auto;
-    margin-left: 38%;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
 }
+
 input#AnsEnig1Inp {
     border-radius: 7px;
     padding: 10px;
-    width: 300px;
-    font: 15pt Arial normal;
+    width: 50%;
+    font: 15pt Arial, sans-serif;
 }
+
 input#AnsEnig1Button {
-    width: 130px;
-    height: auto;
+    width: 30%;
     border-radius: 7px;
     padding: 9px;
-    font: 17pt Arial normal;
+    font: 17pt Arial, sans-serif;
     background-image: url(../src/Enig1RespButtonBackground.gif);
     background-size: cover;
     background-repeat: no-repeat;
-    color: rgb(0, 0, 0);
+    color: black;
     -webkit-text-stroke-width: 0.8px;
     -webkit-text-stroke-color: rgba(234, 0, 255, 0.6);
 }
+
 div#DivRespostaEn1 {
     background-image: url(../src/backgroundFimEnig1.gif);
-    background-size: 750px 460px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     border-radius: 10px;
-    width: 750px;
-    height: 460px;
+    width: 80%;
+    height: auto;
+    aspect-ratio: 3/2;
     position: absolute;
-    margin-left: 33%;
-    margin-top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10%;
     display: none;
 }
+
 div#Dakimakura {
     background-image: url(../src/Dakimakura.png);
     background-size: cover;
     border-radius: 10px;
     background-repeat: no-repeat;
-    width: 250px;
-    height: 300px;
+    width: 25vw;
+    height: 35vh;
     position: absolute;
-    margin-top: 3%;
-    margin-left: 3%;
+    top: 3%;
+    left: 3%;
 }
+
 div#DakiText {
-    width: 250px;
-    height: 200px;
+    width: 45vw;
+    height: auto;
     position: absolute;
-    margin-left: 50%;
-    margin-top: 5%;
-    font: 40pt Arial normal;
+    left: 50%;
+    top: 5%;
+    font: 5vw Arial, sans-serif;
     color: yellow;
 }
+
 p#p1 {
-    font: 22pt Arial normal;
+    font: 3vw Arial, sans-serif;
+}
+
+/* Estilo para telas menores ou em modo retrato */
+@media (max-width: 600px), (orientation: portrait) {
+    body {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+    div#Enig1 {
+        font: 6vw Arial, sans-serif;
+        width: 90%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    div#AnsEnig1 {
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    input#AnsEnig1Inp {
+        width: 60%;
+        font: 4vw Arial, sans-serif;
+    }
+
+    input#AnsEnig1Button {
+        width: 30%;
+        font: 4vw Arial, sans-serif;
+    }
+
+    div#DivRespostaEn1 {
+        width: 90%;
+        aspect-ratio: 3/2;
+        top: 15%;
+    }
+
+    div#Dakimakura {
+        width: 25vw;
+        height: 30vh;
+    }
+
+    div#DakiText {
+        width: 90%;
+        font: 5vw Arial, sans-serif;
+        left: 5%;
+        top: 40%;
+    }
+
+    p#p1 {
+        font: 4vw Arial, sans-serif;
+    }
 }
